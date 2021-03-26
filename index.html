@@ -4,60 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Text To Speech - TTS </title>
 </head>
 <body>
     <main>
-        <h1>Text to Speech - TTS</h1>
+        <h1 class="text-center">Text to Speech - TTS</h1>
         
-        <!-- Select Menu for Voice -->
-        <select id="voices">
-            <option value="0">Select car:</option>
-            <option value="1">Audi</option>
-            <option value="2">BMW</option>
-            <option value="3">Citroen</option>
-            <option value="4">Ford</option>
-            <option value="5">Honda</option>
-            <option value="6">Jaguar</option>
-            <option value="7">Land Rover</option>
-            <option value="8">Mercedes</option>
-            <option value="9">Mini</option>
-            <option value="10">Nissan</option>
-            <option value="11">Toyota</option>
-            <option value="12">Volvo</option>
-        </select>
-
-        <!-- <div class="volumes">
+        <div class="flex-row flex-column mt-3 mb-3">
+            <select id="voices" class="form-control form-control-sm"></select>
+        </div>
+        
+        <div class="d-flex flex-row justify-content-around">
             <div>
                 <p class="lead">Volume</p>
                 <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
-                <span id="volume-label" class="ms-2">1</span>
+                <span id="volume-label">1</span>
             </div>
             <div>
                 <p class="lead">Rate</p>
                 <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
-                <span id="rate-label" class="ms-2">1</span>
+                <span id="rate-label">1</span>
             </div>
             <div>
                 <div>
                     <p class="lead">Pitch</p>
                     <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
-                    <span id="pitch-label" class="ms-2">1</span>
+                    <span id="pitch-label">1</span>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- Text Area  for the User to Type -->
-        <textarea cols="30" rows="10" placeholder="Escreva aqui..."></textarea>
+        <div class="flex-row flex-column mt-1 mb-1">
+            <textarea class="form-control" cols="10" rows="10" placeholder="Digite aqui..."></textarea>
+        </div>
 
-        <div class="group-btn">
-            <button id="start" class="btn btn-success mt-5 me-3">Start</button>
-            <button id="pause" class="btn btn-warning mt-5 me-3">Pause</button>
-            <button id="resume" class="btn btn-info mt-5 me-3">Resume</button>
-            <button id="cancel" class="btn btn-danger mt-5 me-3">Cancel</button>
+        <div class="flex-row ml-1 mt-2">
+            <button id="start"  class="btn btn-success btn-sm mr-2">Start</button>
+            <button id="pause"  class="btn btn-warning btn-sm mr-2">Pause</button>
+            <button id="resume" class="btn btn-info btn-sm mr-2">Resume</button>
+            <button id="cancel" class="btn btn-danger btn-sm mr-2">Cancel</button>
         </div>
 
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./textToSpeech.js"></script>
 </body>
 </html>
